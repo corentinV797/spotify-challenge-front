@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlbumListComponent } from './components/album-list/album-list.component';
+import { LibraryComponent } from './components/library/library.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumListComponent
+    AlbumListComponent,
+    LibraryComponent
   ],
   imports: [
     BrowserModule,
