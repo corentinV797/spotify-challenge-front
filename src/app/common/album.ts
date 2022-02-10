@@ -1,5 +1,5 @@
 export class Album {
-  id: string;
+  spotifyId: string;
   title: string;
   thumbnail: string;
   releaseDate: string;
@@ -9,7 +9,7 @@ export class Album {
     thumbnail: string,
     releaseDate: string)
     {
-      this.id=id;
+      this.spotifyId=id;
       this.title=title;
       this.thumbnail=thumbnail;
       this.releaseDate=releaseDate;
