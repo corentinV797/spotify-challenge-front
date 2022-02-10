@@ -9,9 +9,11 @@
   </button>
 </div>
 
-<div *ngFor="let tempAlbum of albums">
+<div *ngFor="let tempAlbum of albums; let index = index">
   <p>Title: {{tempAlbum.title}}</p>
   <p>Release Date: {{tempAlbum.releaseDate}}</p>
   <img src="{{tempAlbum.thumbnail}}">
+
+  <button (click)="addAlbum(index)">Add</button>
   <hr>
 </div>
