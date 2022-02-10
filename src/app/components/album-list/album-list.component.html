@@ -1,0 +1,19 @@
+<div class="form-header">
+  <input #myInput type="text"
+         placeholder="Search for albums ..."
+         class="au-input au-input-xl"
+         (keyup.enter)="doSearch(myInput.value)" />
+
+  <button (click)="doSearch(myInput.value)" class="au-btn-submit">
+    Search
+  </button>
+</div>
+
+<div *ngFor="let tempAlbum of albums; let index = index">
+  <p>Title: {{tempAlbum.title}}</p>
+  <p>Release Date: {{tempAlbum.releaseDate}}</p>
+  <img src="{{tempAlbum.thumbnail}}">
+
+  <button (click)="addAlbum(index)">Add</button>
+  <hr>
+</div>

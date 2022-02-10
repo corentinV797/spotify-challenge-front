@@ -1,0 +1,7 @@
+<div *ngFor="let tempAlbum of library">
+  <p>Title: {{tempAlbum.title}}</p>
+  <p>Release Date: {{tempAlbum.releaseDate}}</p>
+  <img src="{{tempAlbum.thumbnail}}">
+  <button (click)="deleteAlbum(tempAlbum.id)">Delete</button>
+  <hr>
+</div>
