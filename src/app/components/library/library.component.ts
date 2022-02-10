@@ -13,9 +13,18 @@ export class LibraryComponent implements OnInit {
   constructor(private libraryService: LibraryService) { }
 
   ngOnInit(): void {
+    this.listAlbums();
+  }
+
+  deleteAlbum(id: number): void {
+    this.libraryService.deleteAlbum(id).subscribe(
+      data => this.listAlbums()
+    );
+  }
+
+  private listAlbums(): void {
     this.libraryService.getAlbums().subscribe(
       data => this.library = data
     );
   }
-
 }
