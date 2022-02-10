@@ -20,6 +20,11 @@ export class LibraryService {
   addAlbum(album: Album): Observable<Album> {
     return this.httpClient.post<Album>(this.baseUrl, album);
   }
+
+  deleteAlbum(id: number): Observable<unknown> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.httpClient.delete(url);
+  }
 }
 
 interface GetResponseAlbums {
