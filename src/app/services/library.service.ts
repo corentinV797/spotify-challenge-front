@@ -16,6 +16,10 @@ export class LibraryService {
       map(response => response._embedded.albums)
     );
   }
+
+  addAlbum(album: Album): Observable<Album> {
+    return this.httpClient.post<Album>(this.baseUrl, album);
+  }
 }
 
 interface GetResponseAlbums {
